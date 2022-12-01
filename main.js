@@ -43,14 +43,14 @@
 
 
 function func(str){
+    let initial = str.slice(0,str.length-1)
+    let last = str.slice(length-1)
     for(let i = 0; i < str.length; i++){
-        if((str[0] + str[1] + str[2]) == str.reverse()[0]){
+        if(initial.reduce((a,b) => a+b) == last){
             return true
         }
     }
     return false
-    
-        
 }
 
 console.log(func(['rsq', '6hi', 'g', 'rsq6hig'])); 
