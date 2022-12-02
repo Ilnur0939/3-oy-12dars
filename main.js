@@ -44,7 +44,7 @@
 
 function func(str){
     let initial = str.slice(0,str.length-1)
-    let last = str.slice(length-1)
+    let last = str.reverse()[0]
     for(let i = 0; i < str.length; i++){
         if(initial.reduce((a,b) => a+b) == last){
             return true
